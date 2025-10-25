@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>나만의 슬라이드 생성해 보기</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="유충현" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/font-awesome/css/all.min.css" rel="stylesheet" />
+    <link href="libs/font-awesome/css/v4-shims.min.css" rel="stylesheet" />
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
+    <script src="libs/kePrint/kePrint.js"></script>
+    <link href="libs/lightable/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="slides.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# 나만의 슬라이드 생성해 보기
+]
+.subtitle[
+## - 템플리트 커스토마이징을 이용한<br><br>
+]
+.author[
+### <a href="https://choonghyunryu.github.io/">유충현</a>
+]
+
+---
+
+
+
+
+
+layout: true
+  
+&lt;div class="my-footer"&gt;
+&lt;span&gt;
+&lt;a href="https://jowoncni.com/" target="_blank"&gt;조원씨앤아이&lt;/a&gt;
+&lt;/span&gt;
+&lt;/div&gt; 
+
+---
+
+
+
+## Executive Summary
+
+
+.pull-left-wide[
+**Q - 슬라이드의 템플리트 커스토마이징은 무엇인가요?**  
+- **xaringan-themer.css**, **slides.css** 스타일시트를 수정하여, 
+    - 나만의 슬라이드 템플리트를 만드는 것 
+- **조직**과 **개인**의 **아이덴티티**를 반영한,
+    - **개성있는** 슬라이드 템플리트를 생성
+  
+
+**Q - bitReport 슬라이드의 활용 방안은 무엇인가요?**  
+- **데이터 분석 결과의 소개**
+    - **프로젝트의 결과**를 **효과적**으로 **전달**
+- **웹으로 배포**되는 프리젠테이션
+    - **웹 브라우저만 있으면 사용 가능**
+]
+
+
+---
+
+class: middle
+
+# 이런 기능이 있어요
+
+---
+
+class: middle
+
+# .hand[We...]
+
+.huge[.green[have]] .hand[bitReport 패키지]
+
+.huge[.pink[want]] .hand[우아한 머신러닝, 팬시한 결과, 감탄할 인사이트]
+
+---
+
+## 화면의 2개 컬럼으로 분할합니다 
+
+.pull-left[
+&lt;img src="img/SNS.png" width="50%" style="display: block; margin: auto;" /&gt;
+- **SNS에서 수집된 데이터**
+- 개인정보보호 강화로 쪼그라드는 데이터
+- 그래도 너가 있어서 다행이다.
+]
+.pull-right[
+&lt;img src="img/wordcloud.png" width="50%" style="display: block; margin: auto;" /&gt;
+- 데이터 시각화, 그 이름은 **WordCloud**
+- 빈도분석 중심의 개괄적인 이해
+- 음, 그렇구나. 그래서 어쩌라구요?
+]
+
+---
+
+## 표를 삽입합니다
+
+.tip[
+- R에서 생성한 **데이터 프레임을 표로 출력**&lt;br&gt;
+- 집계표를 출력할 때 유용
+]
+
+&lt;br&gt;
+
+.small[
+&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; 분석 주제 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; 주된 분석 방법 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; 활용 사례 &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 문서 분류(Document Texonomy) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Patthern &amp;amp; Rule &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 상담 콜 분류 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 문서 분류(Document Classification) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Machine Laerning &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 상담 콜 민원 예측 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 주제 발견(Topic discovery) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; LDA topic analysis &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 상담 콜 분류 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 감정 분석(Sentiment analysis) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 감성사전, Machine Laerning &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 긍부정 상담 콜 분석 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 문서 요약(Document summarization) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Text Rank &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; QA를 위한 상담콜 요약 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+---
+
+## 데이터 시각화
+
+.question[ 
+페이스북 방문 회수의 하한과 상한은 어떻게 표현할까요?
+]
+
+&lt;img src="first_slide_files/figure-html/unnamed-chunk-5-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+---
+
+class: middle
+
+# Q &amp; A
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+  "ratio": "16:9",
+  "highlightLines": true,
+  "highlightStyle": "solarized-light",
+  "countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
